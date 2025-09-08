@@ -2,7 +2,6 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './db/database.js';
 
-// Importamos el router de mocks y los modelos
 import mocksRouter from './routers/mocks.router.js';
 import User from './models/user.model.js';
 import Pet from './models/pet.model.js';
@@ -14,14 +13,14 @@ const PORT = process.env.PORT || 8080;
 
 connectDB();
 
-// Middlewares
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Rutas
-app.use('/api/mocks', mocksRouter); // <-- AQUÍ USAMOS EL ROUTER
+//Rutas
+app.use('/api/mocks', mocksRouter); 
 
-// ## Criterio 4 (parte final): Rutas GET para comprobar los registros insertados
+
 app.get('/api/users', async (req, res) => {
     try {
         const users = await User.find();

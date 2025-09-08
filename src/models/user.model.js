@@ -8,15 +8,15 @@ const userSchema = new mongoose.Schema({
     password: { type: String, required: true },
     role: { 
         type: String, 
-        enum: ['user', 'admin'], // El rol solo puede ser uno de estos dos valores
+        enum: ['user', 'admin'], 
         default: 'user' 
     },
     pets: [{ 
         type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Pet' // Referencia al modelo 'Pet'
+        ref: 'Pet'
     }]
 }, { 
-    timestamps: true // Esto añade automáticamente los campos createdAt y updatedAt
+    timestamps: true 
 });
 
 const User = mongoose.model('User', userSchema);
