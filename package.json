@@ -1,7 +1,7 @@
 {
   "name": "backend_iii_entrega01_fa",
   "version": "1.0.0",
-  "description": "Entrega N°1 del curso de Backend III.",
+  "description": "Backend III, Entrega 01.",
   "main": "src/app.js",
   "type": "module",
   "scripts": {
